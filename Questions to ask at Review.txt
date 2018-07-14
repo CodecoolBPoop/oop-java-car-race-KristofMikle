@@ -1,0 +1,3 @@
+1. Ha az idea azt mondja a public objectem lehet privát akkor mindig állitsam át?
+2. 1 soros ifek.
+3. Weatherben az ifnek ajánl az idea változtatást meg a hasonlók.

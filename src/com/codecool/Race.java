@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Race {
     private Weather weather = new Weather();
     private static final int raceHours = 50;
-    private static  ArrayList<Vehicle> vehicleList= new ArrayList<>();
+    private static ArrayList<Vehicle> vehicleList = new ArrayList<>();
 
     private static ArrayList createVehicles() {
         // creates 10 cars, 10 trucks and 10 motorcycles
@@ -19,15 +19,15 @@ public class Race {
     }
 
     private void simulateRace(ArrayList<Vehicle> vehicles) {
-        weather.setRaining();
         for (int hour = 0; hour < raceHours; hour++) {
+            weather.setRaining();
             for (Vehicle vehicle : vehicles) {
                 vehicle.moveForAnHour(this);
             }
         }
     }
 
-    ArrayList<Vehicle> getVehicleList(){
+    ArrayList<Vehicle> getVehicleList() {
         return vehicleList;
     }
 
@@ -53,12 +53,12 @@ public class Race {
         for (Vehicle racer : racers) {
             System.out.print("Name: " + racer.name);
             System.out.print(", Type: " + racer.getClass());
-            System.out.println(", Distance: "  + racer.getDistanceTraveled() + " km");
+            System.out.println(", Distance: " + racer.getDistanceTraveled() + " km");
         }
     }
 
     public static void main(String[] args) {
-	    // write your code here
+        // write your code here
         Race race = new Race();
         vehicleList = createVehicles();
         race.simulateRace(vehicleList);

@@ -24,6 +24,6 @@ public class Truck extends Vehicle {
 
     void moveForAnHour(Race race) {
         if (!isBrokenDown() && isBrokingDown()) {brokeDown();}
-        if (isBrokenDown()) {breakDownTurnsLeft--;} else {distanceTraveled += normalSpeed;}
+        else if (isBrokenDown()) {breakDownTurnsLeft--;} else {distanceTraveled += normalSpeed;}
     }
 }

@@ -9,6 +9,10 @@ public class Motorcycle extends Vehicle {
     }
 
     void moveForAnHour(Race race) {
-        if (race.isRaining()) {distanceTraveled += normalSpeed - (rand.nextInt(46) + 5);} else {distanceTraveled += normalSpeed;}
+        if (race.isRaining()) {
+            distanceTraveled += normalSpeed - (rand.nextInt(46) + 5);
+        } else {
+            distanceTraveled += normalSpeed;
+        }
     }
 }
